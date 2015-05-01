@@ -24,7 +24,7 @@
 	<div class="container"">
 		<h1>Contact List</h1>
 		<h3>
-			<a href="newContact">New Contact</a>
+			<a href="newContact">Neuer Kontakt</a>
 		</h3>
 		<table border="1">
 			<th>No&nbsp;&nbsp;</th>
