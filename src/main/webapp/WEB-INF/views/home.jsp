@@ -2,26 +2,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
-
-<title>JAVA JDBC</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-</head>
-<body>
-<tags:nagivation/>
-
-	<div class="container"">
+<t:genericpage>
+	<jsp:attribute name="header">
+	<t:header/>
+    <title>JAVA JDBC</title>
+    <h3>Text</h3>
+    </jsp:attribute>
+	<jsp:attribute name="footer">
+      <p id="copyright">Footer</p>
+    </jsp:attribute>
+	<jsp:body>
+        <t:nagivation />
+        <div class="container"">
 		<h1>Contact List</h1>
 		<h3>
 			<a href="newContact">Neuer Kontakt</a>
@@ -50,6 +44,6 @@
 		</table>
 	</div>
 	
-	<tags:master />
-</body>
-</html>
+		<t:master />
+    </jsp:body>
+</t:genericpage>

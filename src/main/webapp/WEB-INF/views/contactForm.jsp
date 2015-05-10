@@ -1,18 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="t" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>New/Edit Contact</title>
-</head>
-<body>
-<tags:nagivation/>
-    <div align="center">
-        <h1>New/Edit Contact</h1>
+    
+    
+    <t:genericpage>
+	<jsp:attribute name="header">
+	<t:header/>
+    <title>New/Edit Contact</title>
+    <h3>Text</h3>
+    </jsp:attribute>
+	<jsp:attribute name="footer">
+      <p id="copyright">Footer</p>
+    </jsp:attribute>
+	<jsp:body>
+        <t:nagivation />
+       <div align="center">
+        <h1>Upload/Edit Stuff in DB</h1>
         <form:form action="saveContact" method="post" modelAttribute="contact">
         <table>
             <form:hidden path="id"/> 
@@ -33,11 +39,16 @@
                 <td><form:input path="telephone" /></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="submit" value="Save"></td>
+                <td colspan="2" align="center">
+                <button type="submit" class="btn btn-default" value="Save">Hochladen</button>
+                </td>
             </tr>
         </table>
         </form:form>
     </div>
-    <tags:master/>
-</body>
-</html>
+	
+		<t:master />
+    </jsp:body>
+</t:genericpage>
+    
+    
